@@ -19,7 +19,7 @@ mongoose.connect(
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useCreateIndex: true,
+    
   },
   () => {
     console.log("mongdb is connected");
