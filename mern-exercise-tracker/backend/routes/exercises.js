@@ -1,5 +1,5 @@
 const router = require('express').Router();
-let Exercise = require('../models/exercise.model');
+var Exercise = require('../models/exercise.model');
 
 //CRUD Operations
 
