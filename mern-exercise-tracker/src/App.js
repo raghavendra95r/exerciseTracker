@@ -1,28 +1,24 @@
-import React from 'react';
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Routes, Route} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/navbar.component"
+import Navbar from "./components/navbar.component";
 import ExercisesList from "./components/exercises-list.component";
 import EditExercise from "./components/edit-exercise.component";
 import CreateExercise from "./components/create-exercise.component";
 import CreateUser from "./components/create-user.component";
+
 function App() {
   return (
-    <React.Fragment>
-<Navbar />
-<Routes>
-       
-     <Route path="/" exact component={ExercisesList} />
-      <Route path="/edit/:id" component={EditExercise} />
-     <Route path="/create" component={CreateExercise} />
-     <Route path="/user" component={CreateUser} />  
-  
-     </Routes>
-   
-    </React.Fragment>
-   
-    
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" exact element={<ExercisesList />} />
+        <Route path="/edit/:id" element={<EditExercise />} />
+        <Route path="/create" element={<CreateExercise />} />
+        <Route path="/user" element={<CreateUser />} />
+      </Routes>
+    </Router>
   );
 }
 
